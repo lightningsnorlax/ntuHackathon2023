@@ -10,3 +10,13 @@ body {
 img {
     max-height: 350px;
 }
+
+.research-paper {
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.publish-date {
+    font-size: 1.3rem;
+    opacity: 0.8;
+}

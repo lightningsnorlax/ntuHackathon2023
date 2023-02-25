@@ -1,13 +1,16 @@
 window.onload = function () {
+    localStorage.removeItem("part-search")
+    $("#whole-body").show()
     $("#head").hide()
     $("#body").hide()
+    $("#reset").hide()
 
     var ImageMap = function (map, img) {
         var n,
             areas = map.getElementsByTagName('area'),
             len = areas.length,
             coords = [],
-            previousWidth = 295;
+            previousWidth = 900;
         for (n = 0; n < len; n++) {
             coords[n] = areas[n].coords.split(',');
         }
@@ -31,20 +34,20 @@ window.onload = function () {
     return;
 }
 
-$(".body-area").click((e) => {
+$(".body-area").on("click", (e) => {
     e.preventDefault()
     var target = $(e.currentTarget).attr("title")
-    console.log(target)
     if (target == "Head") {
         $("#head").show()
         $("#whole-body").hide()
+        $("#reset").show()
 
         var ImageMap = function (map, img) {
             var n,
                 areas = map.getElementsByTagName('area'),
                 len = areas.length,
                 coords = [],
-                previousWidth = 124;
+                previousWidth = 420;
             for (n = 0; n < len; n++) {
                 coords[n] = areas[n].coords.split(',');
             }
@@ -65,17 +68,17 @@ $(".body-area").click((e) => {
         },
             imageMap = new ImageMap(document.getElementById('head-map-target'), document.getElementById('head-img'));
         imageMap.resize();
-    }
-    if (target == "Body") {
+    } else if (target == "Body") {
         $("#body").show()
         $("#whole-body").hide()
+        $("#reset").show()
 
         var ImageMap = function (map, img) {
             var n,
                 areas = map.getElementsByTagName('area'),
                 len = areas.length,
                 coords = [],
-                previousWidth = 295;
+                previousWidth = 900;
             for (n = 0; n < len; n++) {
                 coords[n] = areas[n].coords.split(',');
             }
@@ -96,6 +99,14 @@ $(".body-area").click((e) => {
         },
             imageMap = new ImageMap(document.getElementById('just-body-map-target'), document.getElementById('just-body-img'));
         imageMap.resize();
+    } else {
+        console.log(target)
+        localStorage.setItem("part-search", target)
     }
 
+})
+
+$("#reset").on("click", (e) => {
+    e.preventDefault()
+    window.location.reload()
 })
