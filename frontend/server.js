@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
     res.sendFile("/public/html/index.html", { root: __dirname });
 });
 
+app.get("/moreInfo", (req, res) => {
+  res.sendFile("/public/html/moreInfo.html", { root: __dirname });
+});
+
 app.listen(port, () => {
     console.log("Web App Hosted at http://localhost:%s", port);
 });
