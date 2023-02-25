@@ -1,7 +1,4 @@
-#body {
-    display: none;
-}
-
-#head {
-    display: none;
+img {   
+    width: 300px;
+    height: auto;
 }
