@@ -1,174 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--normal-->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
 
-    <!--style sheets-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/index.css" />
+<head>
+  <!--normal-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
 
-    <!--scripts for bootstrap-->
-    <script
-      src="https://kit.fontawesome.com/760288c7c6.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" type="image/x-icon" href="/img/DRGO.png" />
-  </head>
-  <body>
-    <main class="mx-auto d-flex flex-column height align-items-center p-5">
-      <div id="body-thingy" class="container mx-auto mt-5">
-        <div id="whole-body" class="body-part">
-          <h2 class="text-center mb-4">Whole Body</h2>
+  <!--style sheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/index.css" />
 
-          <img
-            src="../img/whole-body.png"
-            usemap="#image-map"
-            id="map-img"
-            class="img-fluid mx-auto d-flex p-3 maparea"
-          />
+  <!--scripts for bootstrap-->
+  <script src="https://kit.fontawesome.com/760288c7c6.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/img/DRGO.png" />
+</head>
 
-          <map name="image-map" id="body-map">
-            <area
-              class="body-area"
-              target=""
-              alt="Head"
-              title="Head"
-              href=""
-              coords="897,0,5,425"
-              shape="rect"
-            />
-            <area
-              class="body-area"
-              target=""
-              alt="Body"
-              title="Body"
-              href=""
-              coords="6,1497,894,431"
-              shape="rect"
-            />
-          </map>
-        </div>
+<body>
+  <main class="mx-auto d-flex flex-column height align-items-center p-5">
+    <div id="body-thingy" class="container mx-auto mt-5">
+      <div id="whole-body" class="body-part">
+        <h2 class="text-center mb-4">Whole Body</h2>
 
-        <div id="head" class="body-part">
-          <h2 class="text-center mb-4">Head</h2>
+        <img src="../img/whole-body.png" usemap="#image-map" id="map-img"
+          class="img-fluid mx-auto d-flex p-3 maparea" />
 
-          <img
-            src="../img/head.png"
-            usemap="#head-map"
-            id="head-img"
-            class="img-fluid mx-auto d-flex p-3 maparea"
-          />
+        <map name="image-map" id="body-map">
+          <area class="body-area" target="" alt="Head" title="Head" href=""
+            coords="370,51,369,39,382,31,400,25,440,19,513,23,566,38,613,57,634,72,640,88,636,104,655,172,650,183,648,189,674,241,680,259,668,264,652,265,646,271,647,281,646,294,640,301,644,310,632,321,631,335,628,347,620,359,608,361,566,366,554,365,548,373,549,387,550,399,556,408,450,433,349,411,356,382,362,353,360,329,347,289,332,261,318,229,309,209,302,179,304,145,306,119,316,95,336,71"
+            shape="poly">
+          <area class="body-area" target="" alt="Body" title="Body" href=""
+          coords="197,1497,191,1360,195,1246,209,1102,220,864,211,817,190,952,187,1024,159,1136,111,1272,139,1310,152,1414,139,1422,123,1410,117,1380,103,1376,105,1402,145,1458,141,1473,93,1460,57,1438,41,1388,39,1357,33,1149,33,1034,67,874,73,700,91,658,91,550,133,486,335,415,451,442,567,418,736,472,799,526,807,654,828,795,827,858,863,1033,858,1380,836,1434,790,1468,755,1470,755,1452,789,1404,786,1371,773,1408,756,1419,742,1401,749,1324,781,1281,750,1167,706,1015,706,943,682,819,680,959,700,1193,706,1323,699,1493,472,1485,448,1383,426,1488"
+            shape="poly">
 
-          <map name="head-map" id="head-map-target">
-            <area
-              class="body-area"
-              target=""
-              alt="Brain"
-              title="Brain"
-              href=""
-              coords="132,264,91,241,70,213,55,183,61,147,70,112,82,91,108,70,149,55,200,47,246,52,277,63,299,81,313,106,320,129,321,150,310,177,291,198,257,219,220,244,182,236"
-              shape="poly"
-            />
-            <area
-              class="body-area"
-              target=""
-              alt="Mouth"
-              title="Mouth"
-              href=""
-              coords="367,268,247,247,158,289,161,323,236,337,278,365,349,361,371,309"
-              shape="poly"
-            />
-          </map>
-        </div>
-
-        <div id="body" class="body-part">
-          <h2 class="text-center mb-4">Body</h2>
-
-          <img
-            src="../img/body.png"
-            usemap="#just-body-map"
-            id="just-body-img"
-            class="img-fluid mx-auto d-flex p-3 maparea"
-          />
-
-          <map name="just-body-map" id="just-body-map-target">
-            <area
-              class="body-area"
-              target=""
-              alt="Lungs"
-              title="Lungs"
-              href=""
-              coords="255,388,341,378,369,363,391,341,406,301,386,207,424,149,447,123,472,140,484,154,509,199,529,197,544,238,569,273,566,287,546,291,548,341,576,369,630,387,644,390,659,291,648,216,633,167,602,114,560,78,522,56,498,51,450,75,405,56,376,55,339,74,314,96,294,125,271,163,253,226,244,275,246,331,252,365"
-              shape="poly"
-            />
-            <area
-              class="body-area"
-              target=""
-              alt="Heart"
-              title="Heart"
-              href=""
-              coords="448,127,387,208,407,299,443,330,515,361,538,358,547,345,543,292,566,278,543,238,528,204,504,202,479,149"
-              shape="poly"
-            />
-            <area
-              class="body-area"
-              target=""
-              alt="Liver"
-              title="Liver"
-              href=""
-              coords="507,393,434,377,385,385,348,394,294,399,254,415,238,450,238,500,249,545,277,591,308,585,352,552,396,504,435,494,484,448,507,414"
-              shape="poly"
-            />
-            <area
-              class="body-area"
-              target=""
-              alt="Stomach"
-              title="Stomach"
-              href=""
-              coords="482,351,498,376,569,381,608,401,626,442,620,469,643,488,643,521,620,556,586,575,557,577,540,567,505,574,470,581,425,579,411,569,380,571,366,555,387,519,430,518,464,501,469,472,497,434,510,415,510,396,493,388,479,383,460,352"
-              shape="poly"
-            />
-          </map>
-        </div>
+        </map>
       </div>
-      <div id="reset" class="mt-auto">
-        <button class="btn mx-auto d-flex mt-3 py-4 btn-dark">
-          <i class="fa-solid fa-rotate-left fa-2xl"></i>
-        </button>
-      </div>
-    </main>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/index.js"></script>
-  </body>
+      <div id="head" class="body-part">
+        <h2 class="text-center mb-4">Head</h2>
+
+        <img src="../img/head.png" usemap="#head-map" id="head-img" class="img-fluid mx-auto d-flex p-3 maparea" />
+
+        <map name="head-map" id="head-map-target">
+          <area class="body-area" target="" alt="Brain" title="Brain" href=""
+            coords="132,264,91,241,70,213,55,183,61,147,70,112,82,91,108,70,149,55,200,47,246,52,277,63,299,81,313,106,320,129,321,150,310,177,291,198,257,219,220,244,182,236"
+            shape="poly" />
+          <area class="body-area" target="" alt="Mouth" title="Mouth" href=""
+            coords="367,268,247,247,158,289,161,323,236,337,278,365,349,361,371,309" shape="poly" />
+        </map>
+      </div>
+
+      <div id="body" class="body-part">
+        <h2 class="text-center mb-4">Body</h2>
+
+        <img src="../img/body.png" usemap="#just-body-map" id="just-body-img"
+          class="img-fluid mx-auto d-flex p-3 maparea" />
+
+        <map name="just-body-map" id="just-body-map-target">
+          <area class="body-area" target="" alt="Lungs" title="Lungs" href=""
+            coords="255,388,341,378,369,363,391,341,406,301,386,207,424,149,447,123,472,140,484,154,509,199,529,197,544,238,569,273,566,287,546,291,548,341,576,369,630,387,644,390,659,291,648,216,633,167,602,114,560,78,522,56,498,51,450,75,405,56,376,55,339,74,314,96,294,125,271,163,253,226,244,275,246,331,252,365"
+            shape="poly" />
+          <area class="body-area" target="" alt="Heart" title="Heart" href=""
+            coords="448,127,387,208,407,299,443,330,515,361,538,358,547,345,543,292,566,278,543,238,528,204,504,202,479,149"
+            shape="poly" />
+          <area class="body-area" target="" alt="Liver" title="Liver" href=""
+            coords="507,393,434,377,385,385,348,394,294,399,254,415,238,450,238,500,249,545,277,591,308,585,352,552,396,504,435,494,484,448,507,414"
+            shape="poly" />
+          <area class="body-area" target="" alt="Stomach" title="Stomach" href=""
+            coords="482,351,498,376,569,381,608,401,626,442,620,469,643,488,643,521,620,556,586,575,557,577,540,567,505,574,470,581,425,579,411,569,380,571,366,555,387,519,430,518,464,501,469,472,497,434,510,415,510,396,493,388,479,383,460,352"
+            shape="poly" />
+        </map>
+      </div>
+    </div>
+    <div id="reset" class="mt-auto">
+      <button class="btn mx-auto d-flex mt-3 py-4 btn-dark">
+        <i class="fa-solid fa-rotate-left fa-2xl"></i>
+      </button>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+
 </html>
