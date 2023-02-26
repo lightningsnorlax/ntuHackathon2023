@@ -11,7 +11,7 @@ const axios = require("axios");
 
 const url = "https://esmed.org/MRA/mra/search/search";
 
-const MAX = 10;
+const MAX = 6;
 
 async function summarize(data) {
   var summary;
@@ -86,6 +86,8 @@ async function performScraping(query) {
         });
       });
   }
+
+  return dict;
 }
 
 const serveStatic = require("serve-static");
@@ -95,19 +97,18 @@ var port = 3001;
 
 var app = express();
 
-app.use(function (req, res, next) {
-  if (req.method != "GET") {
-    res.type(".html");
-    var msg =
-      "<html><body>This server only serves web pages with GET!</body></html>";
-    res.end(msg);
-  } else {
-    next();
-  }
-});
+// app.use(function (req, res, next) {
+//   if (req.method != "GET") {
+//     res.type(".html");
+//     var msg =
+//       "<html><body>This server only serves web pages with GET!</body></html>";
+//     res.end(msg);
+//   } else {
+//     next();
+//   }
+// });
 
 app.use(serveStatic(__dirname + "/public"));
-performScraping("brain");
 
 app.get("/", (req, res) => {
   res.sendFile("/public/html/index.html", { root: __dirname });
@@ -119,7 +120,6 @@ app.get("/body", (req, res) => {
 
 app.get("/moreinfo", (req, res) => {
   var part = req.query.part;
-  console.log(part);
   if (part) {
     res.sendFile("/public/html/moreinfo.html", { root: __dirname });
   } else {
@@ -127,19 +127,12 @@ app.get("/moreinfo", (req, res) => {
   }
 });
 
+app.post("/moreinfo", async (req, res) => {
+  var part = req.query.part;
+  var result = await performScraping(part);
+  res.status(200).json(result);
+});
+
 app.listen(port, () => {
   console.log("Web App Hosted at http://localhost:%s", port);
 });
-
-// kaleb shit testing
-// Define route for fetching JSON data
-// app.get('/data', async (req, res) => {
-//   try {
-//     const response = await axios.get('./public/static/medical_spider.json');
-//     const data = response.data;
-//     res.json(data);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send('Server Error');
-//   }
-// });

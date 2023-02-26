@@ -3,3 +3,14 @@ body,
   height: 100vh;
   height: calc(var(--vh) * 100);
 }
+
+#max {
+  max-width: 500px;
+}
+
+body {
+  background: url("../img/background.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

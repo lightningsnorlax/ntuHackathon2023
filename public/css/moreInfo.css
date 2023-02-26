@@ -1,22 +1,9 @@
-body {
-    background-color: white;
+#imgSrc {
+    aspect-ratio: 1;
+    width: 50px;
+    align-self: center;
 }
 
-
-.fa-bars {
-    color: white;
-}
-
-img {
-    max-height: 350px;
-}
-
-.research-paper {
-    border-radius: 20px;
-    font-size: 1rem;
-}
-
-.publish-date {
-    font-size: 1.3rem;
-    opacity: 0.8;
+.hover:hover {
+    border-color: black !important;
 }
