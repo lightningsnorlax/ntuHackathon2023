@@ -11,6 +11,7 @@ const axios = require("axios");
 
 const url = "https://esmed.org/MRA/mra/search/search";
 
+const TOKEN = "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";
 const MAX = 6;
 
 async function summarize(data) {
@@ -21,7 +22,7 @@ async function summarize(data) {
       data,
       {
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: `Bearer ${TOKEN}`,
         },
       }
     )
