@@ -122,7 +122,7 @@ app.get("/body", (req, res) => {
 app.get("/moreinfo", (req, res) => {
   var part = req.query.part;
   if (part) {
-    res.sendFile("/public/html/moreinfo.html", { root: __dirname });
+    res.sendFile("/public/html/moreInfo.html", { root: __dirname });
   } else {
     res.redirect("/body");
   }
