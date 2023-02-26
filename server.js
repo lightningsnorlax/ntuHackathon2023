@@ -33,14 +33,17 @@ async function summarize(data) {
 }
 
 async function performScraping(query) {
-  // downloading the target web page
-  // by performing an HTTP GET request in Axios
   var dict = {};
 
   await axios
     .post(
       url,
-      { query: query },
+      {
+        query: query,
+        dateFromYear: 2021,
+        dateFromMonth: 1,
+        dateFromDay: 1,
+      },
       {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -110,8 +113,18 @@ app.get("/", (req, res) => {
   res.sendFile("/public/html/index.html", { root: __dirname });
 });
 
+app.get("/body", (req, res) => {
+  res.sendFile("/public/html/body.html", { root: __dirname });
+});
+
 app.get("/moreinfo", (req, res) => {
-  res.sendFile("/public/html/moreinfo.html", { root: __dirname });
+  var part = req.query.part;
+  console.log(part);
+  if (part) {
+    res.sendFile("/public/html/moreinfo.html", { root: __dirname });
+  } else {
+    res.redirect("/body");
+  }
 });
 
 app.listen(port, () => {

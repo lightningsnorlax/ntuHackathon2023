@@ -1,202 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--normal-->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home</title>
+  <head>
+    <!--normal-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
 
-        <!--style sheets-->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="../css/base.css" />
-        <link rel="stylesheet" href="../css/index.css" />
+    <!--style sheets-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/index.css" />
 
-        <!--scripts for bootstrap-->
-        <script
-            src="https://kit.fontawesome.com/760288c7c6.js"
-            crossorigin="anonymous"
-        ></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button
-                    class="navbar-toggler my-3"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                    class="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                >
-                    <form class="ms-auto d-flex">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-
-        <main>
-            <div id="body-thingy" class="container mx-auto mt-5">
-                <div id="whole-body" class="body-part">
-                    <h2 class="text-center mb-4">Whole Body</h2>
-
-                    <img
-                        src="../img/whole-body.png"
-                        usemap="#image-map"
-                        id="map-img"
-                        class="img-fluid mx-auto d-flex p-3"
-                    />
-
-                    <map name="image-map" id="body-map">
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Head"
-                            title="Head"
-                            href=""
-                            coords="897,0,5,425"
-                            shape="rect"
-                        />
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Body"
-                            title="Body"
-                            href=""
-                            coords="6,1497,894,431"
-                            shape="rect"
-                        />
-                    </map>
-                </div>
-
-                <div id="head" class="body-part">
-                    <h2 class="text-center mb-4">Head</h2>
-
-                    <img
-                        src="../img/head.png"
-                        usemap="#head-map"
-                        id="head-img"
-                        class="img-fluid mx-auto d-flex p-3"
-                    />
-
-                    <map name="head-map" id="head-map-target">
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Brain"
-                            title="Brain"
-                            href=""
-                            coords="132,264,91,241,70,213,55,183,61,147,70,112,82,91,108,70,149,55,200,47,246,52,277,63,299,81,313,106,320,129,321,150,310,177,291,198,257,219,220,244,182,236"
-                            shape="poly"
-                        />
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Mouth"
-                            title="Mouth"
-                            href=""
-                            coords="367,268,247,247,158,289,161,323,236,337,278,365,349,361,371,309"
-                            shape="poly"
-                        />
-                    </map>
-                </div>
-
-                <div id="body" class="body-part">
-                    <h2 class="text-center mb-4">Body</h2>
-
-                    <img
-                        src="../img/body.png"
-                        usemap="#just-body-map"
-                        id="just-body-img"
-                        class="img-fluid mx-auto d-flex p-3"
-                    />
-
-                    <map name="just-body-map" id="just-body-map-target">
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Lungs"
-                            title="Lungs"
-                            href=""
-                            coords="255,388,341,378,369,363,391,341,406,301,386,207,424,149,447,123,472,140,484,154,509,199,529,197,544,238,569,273,566,287,546,291,548,341,576,369,630,387,644,390,659,291,648,216,633,167,602,114,560,78,522,56,498,51,450,75,405,56,376,55,339,74,314,96,294,125,271,163,253,226,244,275,246,331,252,365"
-                            shape="poly"
-                        />
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Heart"
-                            title="Heart"
-                            href=""
-                            coords="448,127,387,208,407,299,443,330,515,361,538,358,547,345,543,292,566,278,543,238,528,204,504,202,479,149"
-                            shape="poly"
-                        />
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Liver"
-                            title="Liver"
-                            href=""
-                            coords="507,393,434,377,385,385,348,394,294,399,254,415,238,450,238,500,249,545,277,591,308,585,352,552,396,504,435,494,484,448,507,414"
-                            shape="poly"
-                        />
-                        <area
-                            class="body-area"
-                            target=""
-                            alt="Stomach"
-                            title="Stomach"
-                            href=""
-                            coords="482,351,498,376,569,381,608,401,626,442,620,469,643,488,643,521,620,556,586,575,557,577,540,567,505,574,470,581,425,579,411,569,380,571,366,555,387,519,430,518,464,501,469,472,497,434,510,415,510,396,493,388,479,383,460,352"
-                            shape="poly"
-                        />
-                    </map>
-                </div>
-
-                <div id="reset">
-                    <button class="btn mx-auto d-flex mt-3 py-4 btn-dark">
-                        <i class="fa-solid fa-rotate-left fa-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="../js/index.js"></script>
-    </body>
+    <!--scripts for bootstrap-->
+    <script
+      src="https://kit.fontawesome.com/760288c7c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="/img/DRGO.png" />
+  </head>
+  <body>
+    <div
+      class="d-flex flex-column w-50 mx-auto p-5 gap-3 height justify-content-center align-items-center"
+    >
+      <h3 class="h3 text-center">Welcome to</h3>
+      <img src="../img/DRGO small.png" class="img-fluid mx-auto" alt="DR GO" />
+      <h1 class="h1 text-center">DR GO</h1>
+      <a href="./body" class="btn btn-primary font-bold w-50 mx-auto">
+        START
+      </a>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
 </html>
