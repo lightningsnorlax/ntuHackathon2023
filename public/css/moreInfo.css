@@ -7,3 +7,7 @@
 .hover:hover {
     border-color: black !important;
 }
+
+body {
+    background: none;
+}
